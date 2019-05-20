@@ -61,12 +61,32 @@ public class Gugudan {
 		
 		/*int[] num = new int[9];
 		
-		for(int i=0; i<9; i++) {
+		for(int i=0; i<num.length; i++) {
 			num[i]=(i+1)*2;
 		}
 		
-		for(int i=0; i<9; i++) {
+		for(int i=0; i<num.length; i++) {
 			System.out.println(num[i]);
 		}*/ // 배열을 이용한 계산
+		
+		
+/*		System.out.print("구구단을 출력할 단은? : ");
+		Scanner in = new Scanner(System.in);
+		int times = in.nextInt();
+		print(calculate(times));*/ // 메소드를 이용한 계산
 	}
+	
+/*	public static void print(int[] num) {
+		for(int i=0; i<num.length; i++) {
+			System.out.println(num[i]);
+		}
+	}
+	
+	public static int[] calculate(int times) {
+		int[] num = new int[9];
+		for(int i=0; i<num.length; i++) {
+			num[i]=times*i;
+		}
+		return num;
+	}*/ // 메소드를 이용한 계산
 }
