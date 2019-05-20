@@ -24,10 +24,10 @@ public class Gugudan {
 		System.out.println(3*7);
 		System.out.println(3*8);
 		System.out.println(3*9);*/ 
-		// 2´Ü3´Ü System..out.println À¸·Î Ãâ·Â
+		// 2ë‹¨3ë‹¨ System..out.println ìœ¼ë¡œ ì¶œë ¥
 		
 		/*Scanner in = new Scanner(System.in);
-		System.out.print("±¸±¸´ÜÀ» Ãâ·ÂÇÒ ´ÜÀº? : ");
+		System.out.print("êµ¬êµ¬ë‹¨ì„ ì¶œë ¥í•  ë‹¨ì€? : ");
 		int i = in.nextInt();
 		System.out.println(i*1);
 		System.out.println(i*2);
@@ -38,21 +38,21 @@ public class Gugudan {
 		System.out.println(i*7);
 		System.out.println(i*8);
 		System.out.println(i*9);*/ 
-		// º¯¼ö¿Í ÀÔ·ÂÀ» ÀÌ¿ëÇÑ°è»ê
+		// ë³€ìˆ˜ì™€ ì…ë ¥ì„ ì´ìš©í•œê³„ì‚°
 		
 		/*int i = 1;
 		while(i<10) {
 			System.out.println(i++*4);
 		}*/ 
-		// while ¹İº¹
+		// while ë°˜ë³µ
 		
 		/*for(int i = 1; i<10; i++) {
 			System.out.println(i*5);
 		}*/ 
-		// for ¹İº¹
+		// for ë°˜ë³µ
 		
 		/*	
-		System.out.println("±¸±¸´ÜÀ» Ãâ·ÂÇÒ ´ÜÀº : ");
+		System.out.println("êµ¬êµ¬ë‹¨ì„ ì¶œë ¥í•  ë‹¨ì€ : ");
 		Scanner in = new Scanner(System.in);
 		int num = in.nextInt();
 		
@@ -61,9 +61,9 @@ public class Gugudan {
 				System.out.println(num*i);
 			}
 		}
-		else System.out.println("2ÀÌ»ó , 9ÀÌÇÏÀÇ °ª¸¸ ¹ŞÀ»¼ö ÀÖ½À´Ï´Ù.");
+		else System.out.println("2ì´ìƒ , 9ì´í•˜ì˜ ê°’ë§Œ ë°›ì„ìˆ˜ ìˆìŠµë‹ˆë‹¤.");
 		*/ 
-		// if ¹®À» ÀÌ¿ëÇÑ ÀÔ·Â°ª È®ÀÎ
+		// if ë¬¸ì„ ì´ìš©í•œ ì…ë ¥ê°’ í™•ì¸
 		
 		/*int[] num = new int[9];
 		
@@ -74,26 +74,26 @@ public class Gugudan {
 		for(int i=0; i<num.length; i++) {
 			System.out.println(num[i]);
 		}*/ 
-		// ¹è¿­À» ÀÌ¿ëÇÑ °è»ê
+		// ë°°ì—´ì„ ì´ìš©í•œ ê³„ì‚°
 		
 		
-/*		System.out.print("±¸±¸´ÜÀ» Ãâ·ÂÇÒ ´ÜÀº? : ");
+/*		System.out.print("êµ¬êµ¬ë‹¨ì„ ì¶œë ¥í•  ë‹¨ì€? : ");
 		Scanner in = new Scanner(System.in);
 		int times = in.nextInt();
 		print(calculate(times));*/ 
-		// ¸Ş¼Òµå¸¦ ÀÌ¿ëÇÑ °è»ê
+		// ë©”ì†Œë“œë¥¼ ì´ìš©í•œ ê³„ì‚°
 		
-	/*	System.out.print("±¸±¸´ÜÀ» Ãâ·ÂÇÒ ´ÜÀº? : ");
+	/*	System.out.print("êµ¬êµ¬ë‹¨ì„ ì¶œë ¥í•  ë‹¨ì€? : ");
 		Scanner in = new Scanner(System.in);
 		int times = in.nextInt();
 		GugudanClass gugudan = new GugudanClass();
 		gugudan.print(gugudan.calculate(times));*/
-		//Å¬·¡½º¸¦ ÀÌ¿ëÇÑ °è»ê 
+		//í´ë˜ìŠ¤ë¥¼ ì´ìš©í•œ ê³„ì‚° 
 		
-		System.out.print("±¸±¸´ÜÀ» Ãâ·ÂÇÒ ´ÜÀº?(ex. 6,7) : ");
+		System.out.print("êµ¬êµ¬ë‹¨ì„ ì¶œë ¥í•  ë‹¨ì€?(ex. 6,7) : ");
 		Scanner in = new Scanner(System.in);
 		String problem = in.nextLine();
-		String[] problemDiv = problem.split(","); // ,±âÁØÀ¸·Î ºĞ¸®
+		String[] problemDiv = problem.split(","); // ,ê¸°ì¤€ìœ¼ë¡œ ë¶„ë¦¬
 		
 		int firstNum = Integer.parseInt(problemDiv[0]);
 		int secondNum = Integer.parseInt(problemDiv[1]);
@@ -115,5 +115,5 @@ public class Gugudan {
 			num[i]=times*i;
 		}
 		return num;
-	}*/ // ¸Ş¼Òµå¸¦ ÀÌ¿ëÇÑ °è»ê
+	}*/ // ë©”ì†Œë“œë¥¼ ì´ìš©í•œ ê³„ì‚°
 }
