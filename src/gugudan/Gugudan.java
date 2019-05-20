@@ -90,9 +90,18 @@ public class Gugudan {
 		gugudan.print(gugudan.calculate(times));*/
 		//클래스를 이용한 계산 
 		
+		System.out.print("구구단을 출력할 단은?(ex. 6,7) : ");
+		Scanner in = new Scanner(System.in);
+		String problem = in.nextLine();
+		String[] problemDiv = problem.split(","); // ,기준으로 분리
+		
+		int firstNum = Integer.parseInt(problemDiv[0]);
+		int secondNum = Integer.parseInt(problemDiv[1]);
+		GugudanClass gugudan = new GugudanClass();
+		gugudan.lastCal(firstNum, secondNum);
+		
+		
 	}
-	
-	
 	
 /*	public static void print(int[] num) {
 		for(int i=0; i<num.length; i++) {
