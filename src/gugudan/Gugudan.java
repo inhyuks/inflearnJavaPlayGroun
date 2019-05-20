@@ -25,7 +25,7 @@ public class Gugudan {
 		System.out.println(3*8);
 		System.out.println(3*9);*/ // 2단3단 System..out.println 으로 출력
 		
-		Scanner in = new Scanner(System.in);
+		/*Scanner in = new Scanner(System.in);
 		System.out.print("구구단을 출력할 단은? : ");
 		int i = in.nextInt();
 		System.out.println(i*1);
@@ -36,7 +36,16 @@ public class Gugudan {
 		System.out.println(i*6);
 		System.out.println(i*7);
 		System.out.println(i*8);
-		System.out.println(i*9);
+		System.out.println(i*9);*/ // 변수와 입력을 이용한계산
+		
+		/*int i = 1;
+		while(i<10) {
+			System.out.println(i++*4);
+		}*/ // while 반복
+		
+		for(int i = 1; i<10; i++) {
+			System.out.println(i*5);
+		}
 		
 	}
 }
