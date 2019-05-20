@@ -43,9 +43,20 @@ public class Gugudan {
 			System.out.println(i++*4);
 		}*/ // while 반복
 		
-		for(int i = 1; i<10; i++) {
+		/*for(int i = 1; i<10; i++) {
 			System.out.println(i*5);
+		}*/ // for 반복
+		
+		System.out.println("구구단을 출력할 단은 : ");
+		Scanner in = new Scanner(System.in);
+		int num = in.nextInt();
+		
+		if(1<num && num<10) {
+			for(int i=1; i<10; i++) {
+				System.out.println(num*i);
+			}
 		}
+		else System.out.println("2이상 , 9이하의 값만 받을수 있습니다.");
 		
 	}
 }
