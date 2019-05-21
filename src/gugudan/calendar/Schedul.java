@@ -24,4 +24,8 @@ public class Schedul {
 	public void setContent(String content) {
 		this.content = content;
 	}
+
+	public String saveString() {
+		return date + "," + content + "\n";
+	}
 }

@@ -1,15 +1,19 @@
 package gugudan.calendar;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.HashMap;
 import java.util.Scanner;
 
 public class Calendars {
 
 	private static final int[] MAX_DAYS = { 31, 28, 31, 30, 31, 30, 31, 30, 31, 30, 31, 30 };
 	private static final int[] LEAP_MAX_DAYS = { 31, 29, 31, 30, 31, 30, 31, 30, 31, 30, 31, 30 };
-
+	private static final String SAVE_FILE="calendar.dat";
+	
 	public boolean isLeapYear(int year) {
 		if (year % 4 == 0) {
 			return true;
@@ -108,6 +112,29 @@ public class Calendars {
 		 */
 		// 정교한 달력 생성
 
+		
+		ArrayList<Schedul> list = new ArrayList<>();
+		
+		File f = new File(SAVE_FILE);
+		if(f.exists()) {
+			Scanner s;
+			try {
+				s = new Scanner(f);
+				while(s.hasNext()) { //읽을게 있을때 까지
+					String line = s.nextLine();
+					String[] words = line.split(",");
+					String date = words[0];
+					String content = words[1];
+					Schedul sch = new Schedul(date, content);
+					list.add(sch);
+				}
+				s.close();
+			} catch (FileNotFoundException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		}
+		
 		System.out.println("+----------------------+");
 		System.out.println("| 1. 일정 등록           ");
 		System.out.println("| 2. 일정 검색  ");
@@ -116,7 +143,7 @@ public class Calendars {
 		System.out.println("+----------------------+");
 		String order;
 		String prompt = ">";
-		ArrayList<Schedul> list = new ArrayList<>();
+		
 		do {
 			System.out.println("명령 (1, 2, 3, h, q)");
 			System.out.print(prompt);
@@ -129,7 +156,20 @@ public class Calendars {
 					System.out.println("일정을 입력하세요");
 					System.out.print(prompt);
 					String content = in.next();
-					list.add(new Schedul(date,content));
+					Schedul sch = new Schedul(date,content);
+					list.add(sch);
+					
+					File f1 = new File(SAVE_FILE); //파일 입출력
+					String item =  sch.saveString();
+					try {
+						FileWriter fw = new FileWriter(f1,true); //true는 추가하기 없으면 덮어쓰기
+						fw.write(item);  //csv ,로분리된 데이터
+						fw.close();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+					
+					
 					System.out.println("일정이 등록되었습니다.");
 					break;
 				}
