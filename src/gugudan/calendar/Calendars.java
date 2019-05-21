@@ -30,6 +30,7 @@ public class Calendars {
 		System.out.println("8 9 10 11 12 13 14");
 		System.out.println("15 16 17 18 19 20 21");
 		System.out.println("22 23 24 25 26 27 28");
+		
 	}
 	
 	public int palseWeekDay(String weekDay) {
@@ -85,13 +86,16 @@ public class Calendars {
 				break;
 			}
 			month = in.nextInt();
-			System.out.println("첫번째 요일을 입력하세요. (SU MO TU WE TH FR SA)");
-			System.out.print(prompt);
-			String weekDay = in.next();
+			//System.out.println("첫번째 요일을 입력하세요. (SU MO TU WE TH FR SA)");
+			//System.out.print(prompt);
+			//String weekDay = in.next();
 			System.out.printf("    << %d년 %d월 >>\n",year,month);
 			System.out.println(" 일    월    화    수    목    금    토");
 			System.out.println("------------");
-			for(int i=0; i<cal.palseWeekDay(weekDay); i++) {
+			
+			DoomsDayAlorithm doom = new DoomsDayAlorithm(); //둠스데이알고리즘클래스
+			
+			for(int i=0; i<doom.calDumsDay(year, month,1); i++) {
 				System.out.print("   ");
 			}
 			
@@ -100,7 +104,7 @@ public class Calendars {
 					System.out.print(" ");
 				}
 				System.out.print(i+" ");
-				if((i+cal.palseWeekDay(weekDay))%7==0) { // 열맞추기
+				if((i+doom.calDumsDay(year, month,1))%7==0) { // 열맞추기
 					System.out.println();
 				}
 			}
