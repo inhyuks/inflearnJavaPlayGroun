@@ -31,7 +31,18 @@ public class Calendars {
 		System.out.println("15 16 17 18 19 20 21");
 		System.out.println("22 23 24 25 26 27 28");
 	}
-
+	
+	public int palseWeekDay(String weekDay) {
+		if(weekDay.equals("su")) {return 0;}
+		else if(weekDay.equals("mo")) {return 1;}
+		else if(weekDay.equals("tu")) {return 2;}
+		else if(weekDay.equals("we")) {return 3;}
+		else if(weekDay.equals("th")) {return 4;}
+		else if(weekDay.equals("fr")) {return 5;}
+		else if(weekDay.equals("sa")) {return 6;}
+		else return 0;
+	}
+	
 	public static void main(String[] arg) {
 		Scanner in = new Scanner(System.in);
 	/*	System.out.println("일 월 화 수 목 금 토");
@@ -74,12 +85,22 @@ public class Calendars {
 				break;
 			}
 			month = in.nextInt();
+			System.out.println("첫번째 요일을 입력하세요. (SU MO TU WE TH FR SA)");
+			System.out.print(prompt);
+			String weekDay = in.next();
 			System.out.printf("    << %d년 %d월 >>\n",year,month);
-			System.out.println("일 월 화 수 목 금 토");
+			System.out.println(" 일    월    화    수    목    금    토");
 			System.out.println("------------");
+			for(int i=0; i<cal.palseWeekDay(weekDay); i++) {
+				System.out.print("   ");
+			}
+			
 			for(int i=1; i<=cal.getMaxDayOfMonth(year,month); i++) {
+				if(i<10) { // 일수가 한자리일경우 공백생성
+					System.out.print(" ");
+				}
 				System.out.print(i+" ");
-				if(i%7==0) {
+				if((i+cal.palseWeekDay(weekDay))%7==0) { // 열맞추기
 					System.out.println();
 				}
 			}
